@@ -5,10 +5,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias vim='nvim'
-alias stow='stow --target=~/'
+alias ls="ls --color=auto"
+alias grep="grep --color=auto"
+alias vim="nvim"
+alias stow="stow --target=${HOME}" 
 
 TERM='alacritty'
 SHELL='bash'
