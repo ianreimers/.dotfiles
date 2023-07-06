@@ -6,9 +6,12 @@
 [[ $- != *i* ]] && return
 
 alias ls="ls --color=auto"
+alias ll="ls --color=auto -la"
 alias grep="grep --color=auto"
 alias vim="nvim"
 alias stow="stow --target=${HOME}" 
+alias mon="xrandr --output DP-2 --off && xrandr --output DP-2 \
+  --auto --right-of DVI-D-1"
 
 TERM='alacritty'
 SHELL='bash'
