@@ -15,6 +15,8 @@ o.smartcase = true
 o.swapfile = false
 o.wrap = false
 
+o.autoread = true
+
 -- Always insert spaces (hard tab stop)
 o.expandtab = true  -- Insert real tab w/ CTRL-V<TAB>
 o.tabstop = 2       -- number of spaces that a <Tab> in the file counts for.
@@ -29,7 +31,8 @@ o.cursorline = true
 o.background = 'dark'
 o.termguicolors = true
 
-vim.cmd([[colorscheme gruvbox]])
+--vim.cmd([[colorscheme gruvbox]])
+vim.cmd([[colorscheme tokyonight-storm]]) -- tokyonight-* (storm, night, moon, day)
 
 -- Highlight on yank
 vim.api.nvim_create_autocmd('TextYankPost', {

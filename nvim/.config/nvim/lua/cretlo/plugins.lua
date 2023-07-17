@@ -13,7 +13,10 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
+
+  -- Colorthemes
   use { 'ellisonleao/gruvbox.nvim' }
+  use { 'folke/tokyonight.nvim' }
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -69,6 +72,12 @@ return require('packer').startup(function(use)
 
   -- Autotag (for html)
   use { "windwp/nvim-ts-autotag" }
+
+  -- Autopair
+  use {
+    "windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
