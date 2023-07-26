@@ -1,8 +1,7 @@
 #
-# ~/.bash_profile
+# ~/.profile
 # Note:
-#   Only sourced by bash when started in login mode (ctrl+alt+F1...F6)
-#   Isn't sources when logged in graphically.
+#   Only sourced when logged in graphically
 # 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
