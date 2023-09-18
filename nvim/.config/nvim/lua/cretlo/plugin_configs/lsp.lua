@@ -1,5 +1,26 @@
 require("mason").setup()
-require("mason-lspconfig").setup()
+require("mason-lspconfig").setup({
+    --ensure_installed = {"lua_ls", "pyright", "tsserver", "cssls", "html", "jsonls", "marksman"}
+})
+require("mason-tool-installer").setup({
+    ensure_installed = {
+        -- Language servers
+        "css-lsp",
+        "html-lsp",
+        "json-lsp",
+        "lua-language-server",
+        "marksman",
+        "pyright",
+        "typescript-language-server",
+
+        -- Formatters
+        "prettier",
+
+        -- Debug adapters
+        -- disabling since having issues with DAP
+        --"js-debug-adapter",
+    }
+})
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -34,6 +55,21 @@ end
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 require('lspconfig').pyright.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+require('lspconfig').marksman.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+require('lspconfig').jsonls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+require('lspconfig').html.setup {
   on_attach = on_attach,
   capabilities = capabilities
 }

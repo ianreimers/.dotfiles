@@ -19,8 +19,8 @@ o.autoread = true
 
 -- Always insert spaces (hard tab stop)
 o.expandtab = true  -- Insert real tab w/ CTRL-V<TAB>
-o.tabstop = 2       -- number of spaces that a <Tab> in the file counts for.
-o.shiftwidth = 2
+o.tabstop = 4       -- number of spaces that a <Tab> in the file counts for.
+o.shiftwidth = 4
 o.smarttab = true
 
 -- Show tabs
