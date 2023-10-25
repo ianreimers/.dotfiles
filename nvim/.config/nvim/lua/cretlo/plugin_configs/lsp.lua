@@ -18,7 +18,7 @@ require("mason-tool-installer").setup({
 
         -- Debug adapters
         -- disabling since having issues with DAP
-        --"js-debug-adapter",
+        -- "js-debug-adapter",
     }
 })
 

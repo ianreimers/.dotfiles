@@ -2,30 +2,45 @@ local dap = require('dap')
 local dapui = require("dapui")
 dapui.setup()
 
---dap.adapters['pwa-node'] = {
---    type = 'server',
---    host = '127.0.0.1',
---    port = 8123,
---    executable = {
---        command = 'js-debug-adapter'
---    }
---}
-require('dap-vscode-js').setup({
-    adapters = {'pwa-node'}
-})
+dap.adapters['pwa-node'] = {
+    type = 'server',
+    host = '127.0.0.1',
+    port = 8123,
+    executable = {
+        command = 'js-debug-adapter',
+    }
+}
 
-for _, language in ipairs {'typescript', 'javascript'} do
+--require('dap-vscode-js').setup({
+--    adapters = {'pwa-node'},
+--    debugger_path = "/home/cretlo/.local/share/nvim/mason/packages/js-debug-adapter/js-debug/src/dapDebugServer.js", -- Path to vscode-js-debug installation.
+--})
+
+for _, language in ipairs {'typescript'} do
     dap.configurations[language] = {
         {
             type = 'pwa-node',
             request = 'launch',
             name = 'Launch file',
+            command = 'ts-node ${file}',
             program = '${file}',
             cwd = '${workspaceFolder}',
-            runtimeExecutable = 'node'
         }
     }
 end
+
+--for _, language in ipairs {'typescript', 'javascript'} do
+--    dap.configurations[language] = {
+--        {
+--            type = 'pwa-node',
+--            request = 'launch',
+--            name = 'Launch file',
+--            program = '${file}',
+--            cwd = '${workspaceFolder}',
+--            runtimeExecutable = 'node',
+--        }
+--    }
+--end
 
 vim.keymap.set('n', '<F5>', function() dap.continue() end)
 vim.keymap.set('n', '<F10>', function() dap.step_over() end)

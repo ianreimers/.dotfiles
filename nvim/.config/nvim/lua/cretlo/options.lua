@@ -31,6 +31,8 @@ o.cursorline = true
 o.background = 'dark'
 o.termguicolors = true
 
+o.clipboard = 'unnamedplus'
+
 --vim.cmd([[colorscheme gruvbox]])
 vim.cmd([[colorscheme tokyonight-storm]]) -- tokyonight-* (storm, night, moon, day)
 

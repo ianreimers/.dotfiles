@@ -15,3 +15,5 @@ export PAGER='less'
 
 # Use color in less
 export LESS='-R --use-color -Dd+r$Du+b$'
+
+setxkbmap -option caps:escape

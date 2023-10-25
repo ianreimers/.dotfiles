@@ -13,6 +13,12 @@ alias stow="stow --target=${HOME}"
 alias mon="xrandr --output DP-2 --off && xrandr --output DP-2 \
   --auto --right-of DVI-D-1"
 
+alias dockbuild='sudo docker build -t test-server .'
+alias docklocalrun='sudo docker run -p 127.0.0.1:4000:4000 test-server'
+alias dockrun='sudo docker run -p 4000:4000 test-server'
+alias dockimgrm='sudo docker image rm test-server'
+alias dockcontrm='sudo docker container prune'
+
 #export TERM='alacritty'
 #export SHELL='bash'
 #export PS1='[\u@\h \W]\$ '
