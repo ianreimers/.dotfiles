@@ -12,6 +12,7 @@ require("mason-tool-installer").setup({
         "marksman",
         "pyright",
         "typescript-language-server",
+        "astro",
 
         -- Formatters
         "prettier",
@@ -53,6 +54,11 @@ end
 
 -- Used for additional lsp configuration and completion
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+require('lspconfig').astro.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
 
 require('lspconfig').pyright.setup {
   on_attach = on_attach,
