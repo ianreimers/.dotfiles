@@ -6,9 +6,11 @@
 # 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
-export TERM='alacritty'
-export SHELL='bash'
+# Read shouldn't set in shell config (terminal should set instead)
+# export TERM='alacritty'
 export COLORTERM='truecolor'
+
+export SHELL='bash'
 export PS1='[\u@\h \W]\$ '
 export EDITOR='nvim'
 export WM='i3'

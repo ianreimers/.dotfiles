@@ -15,7 +15,6 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Colorthemes
-    use { 'ellisonleao/gruvbox.nvim' }
     use { 'folke/tokyonight.nvim' }
     use {
         'nvim-lualine/lualine.nvim',
@@ -76,7 +75,14 @@ return require('packer').startup(function(use)
     --}
 
     -- Using mason-tool-installer "ensure_installed" instead
-    --use { 'mfussenegger/nvim-dap-python', requires = {"mfussenegger/nvim-dap"} }
+    use { 'mfussenegger/nvim-dap-python',
+        ft = "python",
+        requires = {"mfussenegger/nvim-dap"},
+        config = function(_, opt)
+            local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
+            require("dap-python").setup(path)
+        end
+    }
     --use { "mxsdev/nvim-dap-vscode-js", requires = {"mfussenegger/nvim-dap"} }
 
     -- Checkout later

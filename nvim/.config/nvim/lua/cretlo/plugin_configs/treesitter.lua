@@ -19,7 +19,8 @@ ts.setup {
         "json",
         "yaml",
         "gitignore",
-        "astro"
+        "astro",
+        "python"
     },
     auto_install = true,
     sync_install = true,

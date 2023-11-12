@@ -25,6 +25,7 @@ alias dockcontrm='sudo docker container prune'
 #
 ## Use color in less
 #export LESS='-R --use-color -Dd+r$Du+b$'
+export CHROME_PATH="/usr/bin/chromium"
 
 neofetch
 source /usr/share/nvm/init-nvm.sh
