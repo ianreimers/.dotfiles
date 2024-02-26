@@ -20,12 +20,18 @@ ts.setup {
         "yaml",
         "gitignore",
         "astro",
-        "python"
+        "python",
+        "java",
+
+        -- Needed for nvim-remote-container
+        "jsonc"
     },
     auto_install = true,
     sync_install = true,
     highlight = {
         enable = true,
+        -- Setting to false disables spellcheck highlighting on everything besides comments
+        additional_vim_regex_highlighting = true
     },
     ignore_install = {},
     indent = {

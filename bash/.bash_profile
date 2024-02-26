@@ -13,6 +13,7 @@ export COLORTERM='truecolor'
 export SHELL='bash'
 export PS1='[\u@\h \W]\$ '
 export EDITOR='nvim'
+export BROWSER='firefox'
 export WM='i3'
 export PAGER='less'
 

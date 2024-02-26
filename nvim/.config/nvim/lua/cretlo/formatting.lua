@@ -10,12 +10,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         vim.schedule(function ()
             local filename = vim.api.nvim_buf_get_name(0)
             local filetype = vim.bo.filetype
-            local systemArgs = { 'npx', 'prettier', '--write', filename}
+            local systemArgs = { 'npx', 'prettier', '--write', filename }
             -- Need to assign '--plugin=prettier-plugin-astro' as system argument for prettier to 
             -- work with astro
-            if (filetype == 'astro') then
-                table.insert(systemArgs, '--plugin=prettier-plugin-astro')
-            end
+            --      Update 2023-12-07: prettier-plugin-tailwind wasn't working until below was removed 
+            --if (filetype == 'astro') then
+            --    table.insert(systemArgs, '--plugin=prettier-plugin-astro')
+            --end
 
             local output = vim.fn.system(systemArgs)
             if vim.v.shell_error ~= 0 then

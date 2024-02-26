@@ -21,6 +21,9 @@ return require('packer').startup(function(use)
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
     }
 
+    -- Indent Lines
+    use { "lukas-reineke/indent-blankline.nvim" }
+
     -- Telescope
     -- Linux: Needed to install ripgrep and fd (:checkhealth telescope)
     -- Upgrade tag from '0.1.1' to 0.1.4 since receving:

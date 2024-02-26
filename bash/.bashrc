@@ -13,11 +13,8 @@ alias stow="stow --target=${HOME}"
 alias mon="xrandr --output DP-2 --off && xrandr --output DP-2 \
   --auto --right-of DVI-D-1"
 
-alias dockbuild='sudo docker build -t test-server .'
-alias docklocalrun='sudo docker run -p 127.0.0.1:4000:4000 test-server'
-alias dockrun='sudo docker run -p 4000:4000 test-server'
-alias dockimgrm='sudo docker image rm test-server'
-alias dockcontrm='sudo docker container prune'
+alias leetshot="flameshot gui -p ~/Pictures/leetcode/"
+alias venv=". ./.venv/bin/activate"
 
 #export TERM='alacritty'
 #export SHELL='bash'
@@ -26,6 +23,9 @@ alias dockcontrm='sudo docker container prune'
 ## Use color in less
 #export LESS='-R --use-color -Dd+r$Du+b$'
 export CHROME_PATH="/usr/bin/chromium"
+
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export PATH=$PATH:$JAVA_HOME/bin
 
 neofetch
 source /usr/share/nvm/init-nvm.sh

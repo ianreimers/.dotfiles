@@ -13,6 +13,8 @@ require("mason-tool-installer").setup({
         "pyright",
         "typescript-language-server",
         "astro",
+        "tailwindcss",
+        "jdtls",
 
         -- Formatters
         "prettier",
@@ -56,7 +58,18 @@ end
 -- Used for additional lsp configuration and completion
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
+
+require('lspconfig').jdtls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+}
+
 require('lspconfig').astro.setup {
+    on_attach = on_attach,
+    capabilities = capabilities
+}
+
+require('lspconfig').tailwindcss.setup {
     on_attach = on_attach,
     capabilities = capabilities
 }
@@ -90,6 +103,12 @@ require('lspconfig').tsserver.setup {
 require('lspconfig').cssls.setup {
     on_attach = on_attach,
     capabilities = capabilities
+}
+
+require('lspconfig').docker_compose_language_service.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "yaml" }
 }
 
 require('lspconfig').lua_ls.setup {

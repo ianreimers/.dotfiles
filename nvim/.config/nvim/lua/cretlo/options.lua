@@ -13,7 +13,9 @@ o.scrolloff = 8
 o.sidescrolloff = 8
 o.smartcase = true
 o.swapfile = false
+
 o.wrap = false
+--o.breakindent = true
 
 o.autoread = true
 
@@ -32,6 +34,7 @@ o.background = 'dark'
 o.termguicolors = true
 
 o.clipboard = 'unnamedplus'
+o.spelllang = 'en_us'
 
 --vim.cmd([[colorscheme gruvbox]])
 vim.cmd([[colorscheme tokyonight-storm]]) -- tokyonight-* (storm, night, moon, day)
