@@ -1,8 +1,0 @@
-require('cretlo.plugin_configs.nvim_tree')
-require('cretlo.plugin_configs.treesitter')
-require('cretlo.plugin_configs.lsp')
-require('cretlo.plugin_configs.cmp')
-require('cretlo.plugin_configs.lualine')
-require('cretlo.plugin_configs.telescope')
-require('cretlo.plugin_configs.dap')
-require('cretlo.plugin_configs.indent_lines')
