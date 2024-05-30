@@ -1,8 +1,5 @@
 #
 # ~/.bash_profile
-# Note:
-#   Only sourced by bash when started in login mode (ctrl+alt+F1...F6)
-#   Isn't sources when logged in graphically.
 # 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
@@ -13,7 +10,7 @@ export COLORTERM='truecolor'
 export SHELL='bash'
 export PS1='[\u@\h \W]\$ '
 export EDITOR='nvim'
-export BROWSER='firefox'
+#export BROWSER='firefox'
 export WM='i3'
 export PAGER='less'
 
