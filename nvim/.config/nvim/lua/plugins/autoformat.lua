@@ -3,7 +3,7 @@ return { -- Autoformat
 	opts = {
 		notify_on_error = true,
 		format_on_save = {
-			timeout_ms = 500,
+			timeout_ms = 1000,
 			lsp_fallback = false,
 		},
 		formatters_by_ft = {
@@ -13,12 +13,18 @@ return { -- Autoformat
 			--
 			-- You can use a sub-list to tell conform to run *until* a formatter
 			-- is found.
-			javascript = { { "prettierd", "prettier" } },
-			typescript = { { "prettierd", "prettier" } },
-			typescriptreact = { { "prettierd", "prettier" } },
-			markdown = { { "prettierd", "prettier" } },
+			javascript = { "prettierd" },
+			typescript = { "prettierd" },
+			typescriptreact = { "prettierd" },
+			astro = { "prettier" },
+			markdown = { "prettierd" },
 			java = { "google-java-format" },
 			cs = { "csharpier" },
+		},
+		formatters = {
+			csharpier = {
+				command = vim.fn.expand("~/.dotnet/tools/dotnet-csharpier"),
+			},
 		},
 	},
 }

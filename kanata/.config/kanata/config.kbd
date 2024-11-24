@@ -1,0 +1,15 @@
+(defsrc
+  caps
+)
+
+(defalias
+  escctrl (tap-hold 100 100 esc lctrl)
+)
+
+(defalias
+  tablmet (tap-hold 100 150 tab lmet)
+)
+
+(deflayer base
+  @escctrl
+)

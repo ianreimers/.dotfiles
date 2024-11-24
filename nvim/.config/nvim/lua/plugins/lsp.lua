@@ -144,7 +144,7 @@ return { -- LSP Configuration & Plugins
 			--    https://github.com/pmizio/typescript-tools.nvim
 			--
 			-- But for many setups, the LSP (`tsserver`) will work just fine
-			tsserver = {},
+			ts_ls = {},
 			tailwindcss = {},
 			html = {},
 			cssls = {},
@@ -154,7 +154,7 @@ return { -- LSP Configuration & Plugins
 			marksman = {},
 			["nginx-language-server"] = {}, -- Needed for mason, but wont get recongized in the handler
 			--
-
+			astro = {},
 			omnisharp = {},
 			--["csharp-language-server"] = {},
 			jdtls = {},
@@ -228,6 +228,12 @@ return { -- LSP Configuration & Plugins
 					})
 				end,
 			},
+		})
+
+		-- Gdscript test
+		require("lspconfig")["gdscript"].setup({
+			name = "godot",
+			cmd = vim.lsp.rpc.connect("127.0.0.1", 6005),
 		})
 	end,
 }

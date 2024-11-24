@@ -9,7 +9,11 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+# Mod4 == Windows Key
+# set $mod Mod4
+
+# Mod1 == left-alt
+set $mod Mod1
 
 exec --no-startup-id picom
 exec_always --no-startup-id killall polybar
