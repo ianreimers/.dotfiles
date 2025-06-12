@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Sets vim bindings in shell
+set -o vi
+
 alias ls="ls --color=auto"
 alias ll="ls --color=auto -la"
 alias grep="grep --color=auto"
@@ -35,6 +38,8 @@ export PATH=$PATH:$JAVA_HOME/bin
 
 export PATH=$PATH:$HOME/.dotnet/tools
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+export PATH=$PATH:$HOME/opt/bin
 
 source /usr/share/nvm/init-nvm.sh
 source /usr/share/nvm/init-nvm.sh

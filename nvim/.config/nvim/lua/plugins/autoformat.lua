@@ -23,7 +23,8 @@ return { -- Autoformat
 		},
 		formatters = {
 			csharpier = {
-				command = vim.fn.expand("~/.dotnet/tools/dotnet-csharpier"),
+				command = vim.fn.expand("~/.dotnet/tools/csharpier"),
+				args = { "format" },
 			},
 		},
 	},
